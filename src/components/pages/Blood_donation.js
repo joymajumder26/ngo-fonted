@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 
 import { useForm } from "react-hook-form";
-const Qurbani = () => {
+const Blood_donation = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = data => {
       console.log("data", data)
@@ -26,24 +26,24 @@ const Qurbani = () => {
     });
   return (
     <main>
-     <h1 className='d-flex justify-content center'>Qurbani</h1>
-     <div className='register-form'>
+      <h1 className='d-flex justify-content center'>Blood Donation</h1>
+       <div className='register-form'>
              <div className="flex-container">
             
             <div className="left-form-container">
             <h2>Welcome to Smile Care</h2>
-            <h4>Please Input Here</h4>
+            <h4>Please input Here</h4>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div class="mb-3">
-                    <label for="exampleInputMeat" class="form-label">Which type of Meat donate</label>
-                    <input {...register("Meat", { required: true, maxLength: 20 })} class="form-control" id="exampleInputMeat" />
+                    <label for="exampleInputblood" class="form-label">Which group of blood donate</label>
+                    <input {...register("blood", { required: true, maxLength: 20 })} class="form-control" id="exampleInputblood" />
                 </div>
                 <div class="mb-3">
-                    <label for="howmuchdonate" class="form-label">How much Meat donate </label>
+                    <label for="howmuchdonate" class="form-label">How much blood donate </label>
                     <input type='number' {...register("howmuchdonate", { required: true })} class="form-control" id="howmuchdonate" />
                 </div>
                 <div class="mb-3">
-                    <label for="Amount" class="form-label">Donation Amount</label>
+                    <label for="Amount" class="form-label">Amount</label>
                     <input type='number' {...register("Amount", { required: true })} class="form-control" id="Amount" />
                 </div>
                 <div class="mb-3">
@@ -64,4 +64,5 @@ const Qurbani = () => {
   );
 };
 
-export default Qurbani;
+
+export default Blood_donation;

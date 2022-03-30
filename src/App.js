@@ -9,7 +9,7 @@ import About from './components/pages/About.js';
 import Message from './components/pages/Message.js';
 import Education from './components/pages/Education';
 import FoodBank from './components/pages/FoodBank';
-import SocialWelfare from './components/pages/SocialWelfare';
+import SocialWelfare from './components/pages/Blood_donation';
 import Water from './components/pages/Water';
 import WomanEmpowerment from './components/pages/WomanEmpowerment';
 import Qurbani from './components/pages/Qurbani';

@@ -8,13 +8,13 @@ const Navbar = () => {
         <nav>
           <div className='nav-wrapper teal'>
             <Link to='/' className='brand-logo hide-on-small-only'>
-            Smile Care
+              Smile Care
             </Link>
             <Link
               to='/'
               className='brand-logo show-on-small hide-on-med-and-up'
             >
-              TIFC Group
+              Smile Care
             </Link>
 
             <Link to='/' data-target='mobile-demo' className='sidenav-trigger'>
@@ -36,10 +36,8 @@ const Navbar = () => {
               <li>
                 <Link to='/socialwelfare'>Blood Donation</Link>
               </li>
-             
-              <li>
-                <Link to='/womanempowerment'>Woman Empowerment</Link>
-              </li>
+
+            
               <li>
                 <Link to='qurbani'>Qurbani</Link>
               </li>
@@ -70,14 +68,18 @@ const Navbar = () => {
           <Link to='/foodbank'>Food Bank</Link>
         </li>
         <li>
-                <Link to='/socialwelfare'>Blood Donation</Link>
-              </li>
-       
-        <li>
-          <Link to='/womanempowerment'>Woman Empowerment</Link>
+          <Link to='/socialwelfare'>Blood Donation</Link>
         </li>
+
+      
         <li>
           <Link to='qurbani'>Qurbani</Link>
+        </li>
+        <li>
+          <Link to='registration'>Registration</Link>
+        </li>
+        <li>
+          <Link to='login'>Login</Link>
         </li>
       </ul>
     </header>
