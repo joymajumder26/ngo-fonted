@@ -44,6 +44,12 @@ const Navbar = () => {
                 <Link to='qurbani'>Qurbani</Link>
               </li>
               <li>
+                <Link to='registration'>Registration</Link>
+              </li>
+              <li>
+                <Link to='login'>Login</Link>
+              </li>
+              <li>
 
               </li>
             </ul>

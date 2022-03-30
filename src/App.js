@@ -17,6 +17,7 @@ import Registration from './components/pages/Registration/Registration';
 
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
+import Login from './components/pages/Login/Login';
 
 const App = () => {
   useEffect(() => {
@@ -32,6 +33,7 @@ const App = () => {
         <Route exact path='/about' component={About} />
         <Route exact path='/message' component={Message} />
         <Route exact path='/registration' component={Registration} />
+        <Route exact path='/login' component={Login} />
         <Route exact path='/education' component={Education} />
         <Route exact path='/foodbank' component={FoodBank} />
         <Route exact path='/socialwelfare' component={SocialWelfare} />
