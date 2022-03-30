@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import AuthProvider from './components/contexts/AuthProvider';
 
 import Navbar from './components/layouts/Navbar';
 import Footer from './components/layouts/Footer.js';
@@ -25,7 +24,7 @@ const App = () => {
   });
 
   return (
-    <AuthProvider>
+ 
     <Router>
       <Navbar />
       <Switch>
@@ -42,7 +41,7 @@ const App = () => {
       </Switch>
       <Footer />
     </Router>
-    </AuthProvider>
+   
   );
 };
 
