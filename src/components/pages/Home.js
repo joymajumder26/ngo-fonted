@@ -6,6 +6,7 @@ import Campaign from '../layouts/Campaign';
 import CardBlock from '../layouts/CardBlock';
 import Quote from '../layouts/Quote';
 
+
 const Home = () => {
   return (
     <main>
@@ -14,6 +15,7 @@ const Home = () => {
       <Campaign />
       <CardBlock />
       <Quote />
+      
     </main>
   );
 };

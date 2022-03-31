@@ -30,6 +30,11 @@ const Registration = () => {
     return (
         // registration info input
         <div className='register-form'>
+             <div className="flex-container">
+            
+            <div className="left-form-container">
+            <h2>Welcome to Smile Care</h2>
+            <h4>Please Register Here</h4>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div class="mb-3">
                     <label for="exampleInputFirstName" class="form-label">First Name </label>
@@ -51,8 +56,13 @@ const Registration = () => {
                     <label for="Password" class="form-label">Password</label>
                     <input type="password"  {...register("Password", { required: true, maxLength: 10 })} class="form-control" id="Password" />
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Register</button>
             </form>
+        </div>
+        <div className="right-form-container">
+        
+        </div>
+        </div>
         </div>
     );
 
