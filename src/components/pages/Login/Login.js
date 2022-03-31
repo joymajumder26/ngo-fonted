@@ -1,20 +1,30 @@
 import React from 'react';
-import  { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import './Login.css';
 
 const Login = () => {
     const { register, handleSubmit } = useForm();
-    const onSubmit = data => {
-        console.log("data", data)
-        const requestOptions = {
+    const onSubmit = (data, e) => {
+        const userData = {
+            email: data.email,
+            password: data.password
+        }
+        console.log("🚀 ~ file: Registration.js ~ line 39 ~ Registration ~ userData", JSON.stringify(userData))
+
+        fetch("http://localhost:5000/api/signin", {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({data })
-        };
-        // fetch('https://reqres.in/api/posts', requestOptions)
-        //     .then(response => response.json())
-        //     .then(data => this.setState({ postId: data.id }));
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(userData)
+        }).then(res => res.json())
+            .then(response => {
+                // window.location.reload()
+                console.log("response", response)
+                e.target.reset()
+
+            })
     };
 
     useEffect(() => {
@@ -38,8 +48,8 @@ const Login = () => {
                     <input type="email" {...register("email", { required: true })} class="form-control" id="email" />
                 </div>
                 <div class="mb-3">
-                    <label for="Password" class="form-label">Password</label>
-                    <input type="password"  {...register("Password", { required: true, maxLength: 10 })} class="form-control" id="Password" />
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password"  {...register("password", { required: true, maxLength: 10 })} class="form-control" id="password" />
                 </div>
                 <button type="submit" class="btn btn-primary">Login</button>
             </form>

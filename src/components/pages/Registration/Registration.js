@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-
+import axios from 'axios';
 import './Registration.css'
 import { useForm } from "react-hook-form";
 
@@ -9,23 +9,59 @@ const Registration = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log("data", data)
-        const requestOptions = {
+        // const requestOptions = {
+        //     method: 'POST',
+        //     headers: { 'Content-Type': 'application/json' },
+        //     body: data
+        // };
+
+        // axios.post('http://localhost:9000/api/signup', requestOptions)
+        //     .then(response => {
+        //         console.log("🚀 ~ file: Registration.js ~ line 20 ~ Registration ~ response", response)
+
+        //     });
+        // fetch('http://localhost:9000/api/signup', requestOptions)
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         console.log("🚀 ~ file: Registration.js ~ line 20 ~ Registration ~ data", data)
+
+        //     });
+
+
+        const url = `localhost:9000/api/signup`
+        const userData = {
+            firstName: data.firstName,
+            lastName: data.lastName,
+            username: data.username,
+            email: data.email,
+            password: data.password
+        }
+        console.log("🚀 ~ file: Registration.js ~ line 39 ~ Registration ~ userData", JSON.stringify(userData))
+
+        fetch("http://localhost:5000/api/signup", {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({data })
-        };
-        fetch('https://reqres.in/api/posts', requestOptions)
-            .then(response => response.json())
-            .then(data => this.setState({ postId: data.id }));
+            // mode: 'no-cors',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(userData)
+        })
+            .then(response => {
+                // window.location.reload()
+                // e.target.reset()
+                console.log("🚀 ~ file: Registration.js ~ line 20 ~ Registration ~ response", response)
+
+            })
+
     };
 
     useEffect(() => {
-        fetch("https://jsonplaceholder.typicode.com/users")
-            .then(res => res.json())
-            .then(res => {
-                console.log("res",res);
-            })
-      });
+        // fetch("https://jsonplaceholder.typicode.com/users")
+        //     .then(res => res.json())
+        //     .then(res => {
+        //         console.log("res", res);
+        //     })
+    });
 
     return (
         // registration info input
@@ -53,8 +89,8 @@ const Registration = () => {
                     <input type="email" {...register("email", { required: true })} class="form-control" id="email" />
                 </div>
                 <div class="mb-3">
-                    <label for="Password" class="form-label">Password</label>
-                    <input type="password"  {...register("Password", { required: true, maxLength: 10 })} class="form-control" id="Password" />
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password"  {...register("password", { required: true, maxLength: 10 })} class="form-control" id="password" />
                 </div>
                 <button type="submit" class="btn btn-primary">Register</button>
             </form>
