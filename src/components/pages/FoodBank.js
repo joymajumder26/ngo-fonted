@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 
 
 import { useForm } from "react-hook-form";
+import './Css/Foodbank.css';
 
 const FoodBank = () => {
   const { register, handleSubmit } = useForm();
@@ -28,7 +29,7 @@ const FoodBank = () => {
   return (
     <main>
      <h1 className='d-flex justify-content center'>Food Bank</h1>
-     <div className='register-form'>
+     <div className='register-forms'>
              <div className="flex-container">
             
             <div className="left-form-container">
@@ -55,7 +56,7 @@ const FoodBank = () => {
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
-        <div className="right-form-container">
+        <div className="foodimg">
         
         </div>
         </div>
