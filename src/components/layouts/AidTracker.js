@@ -12,7 +12,7 @@ const AidTracker = () => {
         <AidTrackerItem icon='fingerprint' title='People Helped' count='1000' />
       </div>
       <div className='row'>
-        <h6>Updated 10AM Today | Since Aug 2017</h6>
+        <h6>Updated 10AM Today | Since March 2022</h6>
       </div>
     </div>
   );

@@ -37,7 +37,7 @@
 .bloodimg {
     
      width: 50%;
-     background-image: url("../whatwedo/blood.jpg");
+     background-image: url("../../../data/img/blood.jpg");
      background-size: cover;
      justify-content: center;
      height: 400px;

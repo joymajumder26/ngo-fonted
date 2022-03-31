@@ -34,10 +34,10 @@
      padding-right: 50px;
      
    }
-.qurbaniimg {
+.reviewimg {
     
      width: 50%;
-     background-image: url("../whatwedo/qurbani.jpg");
+     background-image: url("../../../data/img/review.jpg");
      background-size: cover;
      justify-content: center;
      height: 400px;

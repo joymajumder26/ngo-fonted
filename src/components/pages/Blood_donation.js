@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 
 
 import { useForm } from "react-hook-form";
+import './Css/Blood_donation.css';
 const Blood_donation = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = (data, e) => {
@@ -39,7 +40,7 @@ const Blood_donation = () => {
     return (
         <main>
             <h1 className='d-flex justify-content center'>Blood Donation</h1>
-            <div className='register-form'>
+            <div className='register-forms'>
                 <div className="flex-container">
 
                     <div className="left-form-container">
@@ -66,7 +67,7 @@ const Blood_donation = () => {
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
-                    <div className="right-form-container">
+                    <div className="bloodimg">
 
                     </div>
                 </div>

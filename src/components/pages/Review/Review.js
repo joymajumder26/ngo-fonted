@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 
 
 import { useForm } from "react-hook-form";
+import './Review.css';
 
 const Review = () => {
     const { register, handleSubmit } = useForm();
@@ -56,7 +57,7 @@ const Review = () => {
                   <button type="submit" class="btn btn-primary">Submit</button>
               </form>
           </div>
-          <div className="img" >
+          <div className="reviewimg" >
           
           </div>
           </div>

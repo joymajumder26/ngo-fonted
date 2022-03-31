@@ -8,6 +8,7 @@ const Navbar = () => {
         <nav>
           <div className='nav-wrapper teal'>
             <Link to='/' className='brand-logo hide-on-small-only'>
+            <i class="fa-solid fa-face-grin"></i>
               Smile Care
             </Link>
             <Link
@@ -28,13 +29,16 @@ const Navbar = () => {
                 <Link to='/message'>Message</Link>
               </li>
               <li>
+          <Link to='/contribute'>Contribute</Link>
+        </li>
+              <li>
                 <Link to='/education'>Education</Link>
               </li>
               <li>
                 <Link to='/foodbank'>Food Bank</Link>
               </li>
               <li>
-                <Link to='/socialwelfare'>Blood Donation</Link>
+                <Link to='/bloodDonation'>Blood Donation</Link>
               </li>
 
             
@@ -65,13 +69,16 @@ const Navbar = () => {
           <Link to='/message'>Message</Link>
         </li>
         <li>
+          <Link to='/contribute'>Contribute</Link>
+        </li>
+        <li>
           <Link to='/education'>Education</Link>
         </li>
         <li>
           <Link to='/foodbank'>Food Bank</Link>
         </li>
         <li>
-          <Link to='/socialwelfare'>Blood Donation</Link>
+          <Link to='/bloodDonation'>Blood Donation</Link>
         </li>
 
       

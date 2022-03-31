@@ -13,15 +13,15 @@ const Campaign = () => {
           providing warm sweaters, shawls, and blankets to those in need. Let's
           help keep the needy people of Lahore warm!
         </p>
-        <Link
+        <Link 
           className='waves-effect waves-light pulse btn-large modal-trigger hide-on-small-only'
-          to='/donateprop'
+          to='/contribute'
         >
           <i className='material-icons right'>mood</i>Contribute
         </Link>
         <Link
           className='waves-effect waves-light pulse btn-small modal-trigger hide-on-med-and-up'
-          to='/donateprop'
+          to='/contribute'
         >
           <i className='material-icons right'>mood</i>Contribute
         </Link>

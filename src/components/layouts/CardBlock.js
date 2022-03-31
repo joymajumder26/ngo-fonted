@@ -1,7 +1,7 @@
 import React from 'react';
 import CardBlockItem from './CardBlockItem.js';
 
-import SocialWelfare from '../../data/img/whatwedo/socialWelfare.jpg';
+import BloodDonation from '../../data/img/whatwedo/blooddonation.jpg';
 import School from '../../data/img/whatwedo/school.jpg';
 import Food from '../../data/img/whatwedo/food.jpg';
 import Water from '../../data/img/whatwedo/water.jpg';
@@ -34,7 +34,7 @@ const CardBlock = () => {
           card='card medium teal lighten-2 hoverable'
           button='waves-effect waves-light teal lighten-1 btn-large'
           title='Blood Donation'
-          image={SocialWelfare}
+          image={BloodDonation}
           html='/socialwelfare'
           content='Our recent and ongoing projects include building wells and providing clean drinking water in poor communities across the globe. TIFC has initiated a water supply system, Sabeel-e-Rehmat (SER), to ensure that clean drinking water is being provided to poor communities around the world'
         />
