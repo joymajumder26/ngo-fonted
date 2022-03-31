@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import './Login.css';
 
 const Login = () => {
     const { register, handleSubmit } = useForm();
@@ -27,14 +28,20 @@ const Login = () => {
     };
 
     useEffect(() => {
-        // fetch("https://jsonplaceholder.typicode.com/users")
-        //     .then(res => res.json())
-        //     .then(res => {
-        //         console.log("res",res);
-        //     })
-    });
+        fetch("https://jsonplaceholder.typicode.com/users")
+            .then(res => res.json())
+            .then(res => {
+                console.log("res",res);
+            })
+      });
     return (
-        <div className='register-form'>
+        <div className='register-form '>
+            
+            <div className="flex-container">
+            
+            <div className="left-form-container">
+            <h2>Welcome to Smile Care</h2>
+            <h4>Please Login Here</h4>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email address</label>
@@ -44,8 +51,13 @@ const Login = () => {
                     <label for="password" class="form-label">Password</label>
                     <input type="password"  {...register("password", { required: true, maxLength: 10 })} class="form-control" id="password" />
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Login</button>
             </form>
+        </div>
+        <div className="right-form-container">
+        
+        </div>
+        </div>
         </div>
     );
 };

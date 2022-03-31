@@ -28,35 +28,17 @@ const CardBlock = () => {
           title='Food Bank'
           image={Food}
           html='/foodbank'
-          content='TIFC is committed to help those in need of food. Our goal is to provide food and supplies to less-fortunate families across the globe. We aim to collect and provide at least $50 a month to ensure the needs of poor families.'
+          content='Smile Care is committed to help those in need of food. Our goal is to provide food and supplies to less-fortunate families across the globe. We aim to collect and provide at least $50 a month to ensure the needs of poor families.'
         />
         <CardBlockItem
           card='card medium teal lighten-2 hoverable'
           button='waves-effect waves-light teal lighten-1 btn-large'
-          title='Social Welfare'
+          title='Blood Donation'
           image={SocialWelfare}
           html='/socialwelfare'
           content='Our recent and ongoing projects include building wells and providing clean drinking water in poor communities across the globe. TIFC has initiated a water supply system, Sabeel-e-Rehmat (SER), to ensure that clean drinking water is being provided to poor communities around the world'
         />
-      </div>
-      <div className='row'>
-        <CardBlockItem
-          card='card medium blue lighten-2 hoverable'
-          button='waves-effect waves-light blue lighten-1 btn-large'
-          title='Water'
-          image={Water}
-          html='/water'
-          content=''
-        />
-        <CardBlockItem
-          card='card medium green lighten-2 hoverable'
-          button='waves-effect waves-light green lighten-1 btn-large'
-          title='Woman Empowerment'
-          image={WomanEmpowerment}
-          html='/womanempowerment'
-          content=''
-        />
-        <CardBlockItem
+           <CardBlockItem
           card='card medium brown lighten-2 hoverable'
           button='waves-effect waves-light brown lighten-1 btn-large'
           title='Qurbani'
@@ -65,6 +47,7 @@ const CardBlock = () => {
           content=''
         />
       </div>
+     
     </div>
   );
 };
