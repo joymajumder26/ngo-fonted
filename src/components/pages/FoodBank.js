@@ -37,19 +37,19 @@ const FoodBank = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div class="mb-3">
                     <label for="exampleInputFood" class="form-label">Which type of Food donate</label>
-                    <input {...register("Food", { required: true, maxLength: 20 })} class="form-control" id="exampleInputFood" />
+                    <input {...register("foodName", { required: true, maxLength: 20 })} class="form-control" id="exampleInputFood" />
                 </div>
                 <div class="mb-3">
                     <label for="howmuchdonate" class="form-label">How much Food donate </label>
-                    <input type='number' {...register("howmuchdonate", { required: true })} class="form-control" id="howmuchdonate" />
+                    <input type='number' {...register("foodQuantity", { required: true })} class="form-control" id="howmuchdonate" />
                 </div>
                 <div class="mb-3">
                     <label for="Amount" class="form-label">Donation Amount</label>
-                    <input type='number' {...register("Amount", { required: true })} class="form-control" id="Amount" />
+                    <input type='number' {...register("donationAmount", { required: true })} class="form-control" id="Amount" />
                 </div>
                 <div class="mb-3">
                     <label for="area" class="form-label">Donation Area</label>
-                    <input  {...register("email", { required: true })} class="form-control" id="area" />
+                    <input  {...register("area", { required: true })} class="form-control" id="area" />
                 </div>
                
                 <button type="submit" class="btn btn-primary">Submit</button>

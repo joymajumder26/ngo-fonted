@@ -3,6 +3,9 @@ import { useEffect, useState } from 'react';
 
 
 import { useForm } from "react-hook-form";
+import '../pages/Css/Education.css';
+
+
 
 
 const Education = () => {
@@ -30,7 +33,7 @@ const Education = () => {
   return (
     <main>
       <h1 className='d-flex justify-content center'>Education</h1>
-       <div className='register-form'>
+       <div className='register-forms'>
              <div className="flex-container">
             
             <div className="left-form-container">
@@ -39,25 +42,25 @@ const Education = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div class="mb-3">
                     <label for="exampleInputBook" class="form-label">Which type of Book donate</label>
-                    <input {...register("Book", { required: true, maxLength: 20 })} class="form-control" id="exampleInputBook" />
+                    <input {...register("bookName", { required: true, maxLength: 20 })} class="form-control" id="exampleInputBook" />
                 </div>
                 <div class="mb-3">
                     <label for="howmuchdonate" class="form-label">How much Book donate </label>
-                    <input type='number' {...register("howmuchdonate", { required: true })} class="form-control" id="howmuchdonate" />
+                    <input type='number' {...register("bookQuantity", { required: true })} class="form-control" id="howmuchdonate" />
                 </div>
                 <div class="mb-3">
                     <label for="Amount" class="form-label">Amount</label>
-                    <input type='number' {...register("Amount", { required: true })} class="form-control" id="Amount" />
+                    <input type='number' {...register("bookAmount", { required: true })} class="form-control" id="Amount" />
                 </div>
                 <div class="mb-3">
                     <label for="area" class="form-label">Donation Area</label>
-                    <input  {...register("email", { required: true })} class="form-control" id="area" />
+                    <input  {...register("area", { required: true })} class="form-control" id="area" />
                 </div>
                
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
-        <div className="right-form-container">
+        <div className="img" >
         
         </div>
         </div>

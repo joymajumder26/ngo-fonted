@@ -36,19 +36,19 @@ const Blood_donation = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div class="mb-3">
                     <label for="exampleInputblood" class="form-label">Which group of blood donate</label>
-                    <input {...register("blood", { required: true, maxLength: 20 })} class="form-control" id="exampleInputblood" />
+                    <input {...register("bloodGroup", { required: true, maxLength: 20 })} class="form-control" id="exampleInputblood" />
                 </div>
                 <div class="mb-3">
                     <label for="howmuchdonate" class="form-label">How much blood donate </label>
-                    <input type='number' {...register("howmuchdonate", { required: true })} class="form-control" id="howmuchdonate" />
+                    <input type='number' {...register("bloodQuantity", { required: true })} class="form-control" id="howmuchdonate" />
                 </div>
                 <div class="mb-3">
                     <label for="Amount" class="form-label">Amount</label>
-                    <input type='number' {...register("Amount", { required: true })} class="form-control" id="Amount" />
+                    <input type='number' {...register("bloodAmount", { required: true })} class="form-control" id="Amount" />
                 </div>
                 <div class="mb-3">
                     <label for="area" class="form-label">Donation Area</label>
-                    <input  {...register("email", { required: true })} class="form-control" id="area" />
+                    <input  {...register("area", { required: true })} class="form-control" id="area" />
                 </div>
                
                 <button type="submit" class="btn btn-primary">Submit</button>

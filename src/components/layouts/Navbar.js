@@ -42,6 +42,9 @@ const Navbar = () => {
                 <Link to='qurbani'>Qurbani</Link>
               </li>
               <li>
+          <Link to='review'>Review</Link>
+        </li>
+              <li>
                 <Link to='registration'>Registration</Link>
               </li>
               <li>
@@ -74,6 +77,9 @@ const Navbar = () => {
       
         <li>
           <Link to='qurbani'>Qurbani</Link>
+        </li>
+        <li>
+          <Link to='review'>Review</Link>
         </li>
         <li>
           <Link to='registration'>Registration</Link>

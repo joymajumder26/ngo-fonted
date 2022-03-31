@@ -19,6 +19,8 @@ import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import Login from './components/pages/Login/Login';
 
+import Review from './components/pages/Review/Review';
+
 const App = () => {
   useEffect(() => {
     M.AutoInit();
@@ -40,6 +42,7 @@ const App = () => {
         <Route exact path='/water' component={Water} />
         <Route exact path='/womanempowerment' component={WomanEmpowerment} />
         <Route exact path='/qurbani' component={Qurbani} />
+        <Route exact path='/review' component={Review} />
       </Switch>
       <Footer />
     </Router>
