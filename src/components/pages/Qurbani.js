@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 
 
 import { useForm } from "react-hook-form";
+import Footer from '../layouts/Footer';
+import Navbar from '../layouts/Navbar';
 
 import './Css/Qurbani.css';
 const Qurbani = () => {
@@ -28,6 +30,7 @@ const Qurbani = () => {
     });
   return (
     <main>
+        <Navbar/>
      <h1 className='d-flex justify-content center'>Qurbani</h1>
      <div className='register-forms'>
              <div className="flex-container">
@@ -61,7 +64,7 @@ const Qurbani = () => {
         </div>
         </div>
         </div>
-
+<Footer/>
     </main>
   );
 };

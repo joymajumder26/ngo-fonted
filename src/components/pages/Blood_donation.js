@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 
 
 import { useForm } from "react-hook-form";
+import Footer from '../layouts/Footer';
+import Navbar from '../layouts/Navbar';
 import './Css/Blood_donation.css';
 const Blood_donation = () => {
     const { register, handleSubmit } = useForm();
@@ -39,6 +41,7 @@ const Blood_donation = () => {
     });
     return (
         <main>
+            <Navbar/>
             <h1 className='d-flex justify-content center'>Blood Donation</h1>
             <div className='register-forms'>
                 <div className="flex-container">
@@ -72,7 +75,7 @@ const Blood_donation = () => {
                     </div>
                 </div>
             </div>
-
+        <Footer/>
         </main>
     );
 };

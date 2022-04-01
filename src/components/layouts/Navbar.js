@@ -8,7 +8,7 @@ const Navbar = () => {
         <nav>
           <div className='nav-wrapper teal'>
             <Link to='/' className='brand-logo hide-on-small-only'>
-            <i class="fa-solid fa-face-grin"></i>
+              <i class="fa-solid fa-face-grin"></i>
               Smile Care
             </Link>
             <Link
@@ -25,12 +25,10 @@ const Navbar = () => {
               <li>
                 <Link to='/about'>About</Link>
               </li>
+             
               <li>
-                <Link to='/message'>Message</Link>
+                <Link to='/contribute'>Contribute</Link>
               </li>
-              <li>
-          <Link to='/contribute'>Contribute</Link>
-        </li>
               <li>
                 <Link to='/education'>Education</Link>
               </li>
@@ -41,12 +39,15 @@ const Navbar = () => {
                 <Link to='/bloodDonation'>Blood Donation</Link>
               </li>
 
-            
+
               <li>
                 <Link to='qurbani'>Qurbani</Link>
               </li>
               <li>
                 <Link to='review'>Review</Link>
+              </li>
+              <li>
+                <Link to='sidebar'>Admin</Link>
               </li>
               <li>
                 <Link to='registration'>Registration</Link>
@@ -65,9 +66,7 @@ const Navbar = () => {
         <li>
           <Link to='/about'>About</Link>
         </li>
-        <li>
-          <Link to='/message'>Message</Link>
-        </li>
+        
         <li>
           <Link to='/contribute'>Contribute</Link>
         </li>
@@ -81,7 +80,7 @@ const Navbar = () => {
           <Link to='/bloodDonation'>Blood Donation</Link>
         </li>
 
-      
+
         <li>
           <Link to='qurbani'>Qurbani</Link>
         </li>

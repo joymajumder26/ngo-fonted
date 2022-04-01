@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
     
     
 import { useForm } from "react-hook-form";
+import Footer from '../../layouts/Footer';
+import Navbar from '../../layouts/Navbar';
 import './Contribute.css';
 
 
@@ -44,6 +46,7 @@ const Contribute = () => {
         });
         return (
             <main>
+                <Navbar/>
                 <h1 className='d-flex justify-content center'>Donate Amount</h1>
                 <div className='register-forms'>
                     <div className="flex-container">
@@ -70,7 +73,7 @@ const Contribute = () => {
                         </div>
                     </div>
                 </div>
-    
+    <Footer/>
             </main>
         );
     };

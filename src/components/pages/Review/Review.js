@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 
 
 import { useForm } from "react-hook-form";
+import Footer from '../../layouts/Footer';
+import Navbar from '../../layouts/Navbar';
 import './Review.css';
 
 const Review = () => {
@@ -29,6 +31,7 @@ const Review = () => {
       });
     return (
       <main>
+          <Navbar/>
         <h1 className='d-flex justify-content center'>Review</h1>
          <div className='register-forms'>
                <div className="flex-container">
@@ -62,7 +65,7 @@ const Review = () => {
           </div>
           </div>
           </div>
-  
+  <Footer/>
       </main>
     );
   };
