@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 
 
 import { useForm } from "react-hook-form";
+import Footer from '../../layouts/Footer';
+import Navbar from '../../layouts/Navbar';
 import './Review.css';
 
 const Review = () => {

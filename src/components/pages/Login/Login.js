@@ -1,6 +1,8 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import Footer from '../../layouts/Footer';
+import Navbar from '../../layouts/Navbar';
 import './Login.css';
 
 const Login = () => {
@@ -35,8 +37,11 @@ const Login = () => {
             })
       });
     return (
+       <div>
+           <Navbar/>
         <div className='register-form '>
-            
+
+
             <div className="flex-container">
             
             <div className="left-form-container">
@@ -59,6 +64,8 @@ const Login = () => {
         </div>
         </div>
         </div>
+        <Footer/>
+        </div> 
     );
 };
 

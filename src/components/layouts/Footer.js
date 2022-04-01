@@ -29,8 +29,8 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className='grey-text text-lighten-3' to='/message'>
-                    Message
+                <Link className='grey-text text-lighten-3' to='/contribute'>
+                    Contribute
                   </Link>
                 </li>
                 <li>

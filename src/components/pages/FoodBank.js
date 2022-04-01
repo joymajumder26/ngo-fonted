@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 
 
 import { useForm } from "react-hook-form";
+import Footer from '../layouts/Footer';
+import Navbar from '../layouts/Navbar';
 import './Css/Foodbank.css';
 
 const FoodBank = () => {
@@ -39,7 +41,9 @@ const FoodBank = () => {
             })
     });
   return (
-    <main>
+      <div>
+          <Navbar/>
+    {/* // <main> */}
      <h1 className='d-flex justify-content center'>Food Bank</h1>
      <div className='register-forms'>
              <div className="flex-container">
@@ -73,8 +77,9 @@ const FoodBank = () => {
         </div>
         </div>
         </div>
-
-        </main>
+        <Footer/>
+</div>
+        // </main>
     );
 };
 

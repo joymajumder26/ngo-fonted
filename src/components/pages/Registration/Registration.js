@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Registration.css'
 import { useForm } from "react-hook-form";
+import Navbar from '../../layouts/Navbar';
+import Footer from '../../layouts/Footer';
 
 const Registration = () => {
 
@@ -65,7 +67,10 @@ const Registration = () => {
 
     return (
         // registration info input
-        <div className='register-form'>
+
+       <div>
+           <Navbar/>
+            <div className='register-form'>
              <div className="flex-container">
             
             <div className="left-form-container">
@@ -100,6 +105,8 @@ const Registration = () => {
         </div>
         </div>
         </div>
+        <Footer/>
+       </div>
     );
 
 };

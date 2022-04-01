@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 
 
 import { useForm } from "react-hook-form";
+import Footer from '../layouts/Footer';
+import Navbar from '../layouts/Navbar';
 import '../pages/Css/Education.css';
 
 
@@ -44,6 +46,8 @@ const Education = () => {
     });
     return (
         <main>
+            
+            <Navbar/>
             <h1 className='d-flex justify-content center'>Education</h1>
             <div className='register-forms'>
                 <div className="flex-container">
@@ -77,7 +81,7 @@ const Education = () => {
                     </div>
                 </div>
             </div>
-
+        <Footer/>
         </main>
     );
 };
