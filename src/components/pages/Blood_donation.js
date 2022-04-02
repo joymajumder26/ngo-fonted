@@ -9,6 +9,8 @@ import './Css/Blood_donation.css';
 const Blood_donation = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = (data, e) => {
+        const process = window.confirm("Are You Sure,You want To Added");
+       if(process){
         const bloodData = {
             bloodGroup: data.bloodGroup,
             bloodQuantity: data.bloodQuantity,
@@ -28,9 +30,11 @@ const Blood_donation = () => {
                 // window.location.reload()
                 e.target.reset()
                 console.log("🚀 ~ file: Registration.js ~ line 20 ~ Registration ~ response", response)
+                alert("Added Successfully,Thank You!!");
 
             })
     };
+       }
 
     useEffect(() => {
         fetch("https://jsonplaceholder.typicode.com/users")

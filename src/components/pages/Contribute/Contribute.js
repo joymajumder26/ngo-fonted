@@ -13,37 +13,46 @@ const Contribute = () => {
 
 
     const { register, handleSubmit } = useForm();
+   
+    
     const onSubmit = (data, e) => {
-        const donateData = {
-            amount: data.amount,
-            area: data.area,
-        }
-        console.log("🚀 ~ file: Registration.js ~ line 39 ~ Registration ~ userData", JSON.stringify(donateData))
-
-        fetch("http://localhost:5000/api/donate", {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(donateData)
-        })
-            .then(response => {
-                // window.location.reload()
-                e.target.reset()
-                console.log("🚀 ~ file: Registration.js ~ line 20 ~ Registration ~ response", response)
-
+        const process = window.confirm("Are You Sure,You want To Added");
+        if(process){
+            const donateData = {
+                amount: data.amount,
+                area: data.area,
+            }
+            console.log("🚀 ~ file: Registration.js ~ line 39 ~ Registration ~ userData", JSON.stringify(donateData))
+    
+            fetch("http://localhost:5000/api/donate", {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(donateData)
             })
-    };
-
-    useEffect(() => {
-        fetch("https://jsonplaceholder.typicode.com/users")
-            .then(res => res.json())
-            .then(res => {
-                console.log("res", res);
-            })
+                .then(response => {
+                    // window.location.reload()
+                    e.target.reset()
+                    console.log("🚀 ~ file: Registration.js ~ line 20 ~ Registration ~ response", response);
+                    alert("Added Successfully,Thank You!!");
+    
+                })
+            }
+        };
+    
+        useEffect(() => {
+            fetch("https://jsonplaceholder.typicode.com/users")
+                .then(res => res.json())
+                .then(res => {
+                    console.log("res", res);
+                })
+        
     });
     return (
-        <main>
+        <div>
+            <Navbar/>
+            <main>
             <h1 className='d-flex justify-content center'>Donate Amount</h1>
             <div className='register-forms'>
                 <div className="flex-container">
@@ -72,6 +81,8 @@ const Contribute = () => {
             </div>
 
         </main>
+        <Footer/>
+        </div>
     );
 };
 

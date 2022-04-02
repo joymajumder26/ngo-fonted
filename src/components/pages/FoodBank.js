@@ -10,28 +10,33 @@ import './Css/Foodbank.css';
 const FoodBank = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = (data, e) => {
-        const foodData = {
-            foodName: data.foodName,
-            foodQuantity: data.foodQuantity,
-            donationAmount: data.donationAmount,
-            area: data.area,
-        }
-        console.log("🚀 ~ file: Registration.js ~ line 39 ~ Registration ~ userData", JSON.stringify(foodData))
-
-        fetch("http://localhost:5000/api/food", {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(foodData)
-        })
-            .then(response => {
-                // window.location.reload()
-                e.target.reset()
-                console.log("🚀 ~ file: Registration.js ~ line 20 ~ Registration ~ response", response)
-
+        const process = window.confirm("Are You Sure,You want To Added");
+        if(process){
+            const foodData = {
+                foodName: data.foodName,
+                foodQuantity: data.foodQuantity,
+                donationAmount: data.donationAmount,
+                area: data.area,
+            }
+            console.log("🚀 ~ file: Registration.js ~ line 39 ~ Registration ~ userData", JSON.stringify(foodData))
+    
+            fetch("http://localhost:5000/api/food", {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(foodData)
             })
-    };
+                .then(response => {
+                    // window.location.reload()
+                    e.target.reset()
+                    console.log("🚀 ~ file: Registration.js ~ line 20 ~ Registration ~ response", response)
+                    alert("Added Successfully,Thank You!!");
+    
+                })
+        };
+        }
+        
 
     useEffect(() => {
         fetch("https://jsonplaceholder.typicode.com/users")

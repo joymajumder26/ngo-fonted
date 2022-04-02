@@ -10,6 +10,8 @@ import './Css/Qurbani.css';
 const Qurbani = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = (data, e) => {
+        const process = window.confirm("Are You Sure,You want To Added");
+       if(process){
         const meatData = {
             meatName: data.meatName,
             meatQuantity: data.meatQuantity,
@@ -29,9 +31,11 @@ const Qurbani = () => {
                 // window.location.reload()
                 e.target.reset()
                 console.log("🚀 ~ file: Registration.js ~ line 20 ~ Registration ~ response", response)
+                alert("Added Successfully,Thank You!!");
 
             })
     };
+       }
 
     useEffect(() => {
         fetch("https://jsonplaceholder.typicode.com/users")
@@ -41,7 +45,9 @@ const Qurbani = () => {
             })
     });
     return (
-        <main>
+       <div>
+           <Navbar/>
+            <main>
             <h1 className='d-flex justify-content center'>Qurbani</h1>
             <div className='register-forms'>
                 <div className="flex-container">
@@ -77,6 +83,8 @@ const Qurbani = () => {
             </div>
 
         </main>
+        <Footer/>
+       </div>
     );
 };
 

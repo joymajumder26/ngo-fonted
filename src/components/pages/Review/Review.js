@@ -11,28 +11,34 @@ import './Review.css';
 const Review = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = (data, e) => {
-        const reviewData = {
-            reviewName: data.reviewName,
-            organizationName: data.organizationName,
-            feedback: data.feedback,
-            rating: data.rating,
-        }
-        console.log("🚀 ~ file: Registration.js ~ line 39 ~ Registration ~ userData", JSON.stringify(reviewData))
-
-        fetch("http://localhost:5000/api/review", {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(reviewData)
-        })
-            .then(response => {
-                // window.location.reload()
-                e.target.reset()
-                console.log("🚀 ~ file: Registration.js ~ line 20 ~ Registration ~ response", response)
-
+        const process = window.confirm("Are You Sure,You want To Added");
+        if(process){
+            const reviewData = {
+                reviewName: data.reviewName,
+                organizationName: data.organizationName,
+                feedback: data.feedback,
+                rating: data.rating,
+            }
+            console.log("🚀 ~ file: Registration.js ~ line 39 ~ Registration ~ userData", JSON.stringify(reviewData))
+    
+            fetch("http://localhost:5000/api/review", {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(reviewData)
             })
-    };
+                .then(response => {
+                    // window.location.reload()
+                    e.target.reset()
+                    console.log("🚀 ~ file: Registration.js ~ line 20 ~ Registration ~ response", response)
+                    alert("Added Successfully,Thank You!!");
+
+    
+                })
+        };
+        }
+        
 
     useEffect(() => {
         fetch("https://jsonplaceholder.typicode.com/users")
@@ -42,7 +48,9 @@ const Review = () => {
             })
     });
     return (
-        <main>
+      <div>
+          <Navbar/>
+            <main>
             <h1 className='d-flex justify-content center'>Review</h1>
             <div className='register-forms'>
                 <div className="flex-container">
@@ -78,6 +86,8 @@ const Review = () => {
             </div>
 
         </main>
+        <Footer/>
+      </div>
     );
 };
 export default Review;

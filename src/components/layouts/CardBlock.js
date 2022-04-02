@@ -4,8 +4,7 @@ import CardBlockItem from './CardBlockItem.js';
 import BloodDonation from '../../data/img/whatwedo/blooddonation.jpg';
 import School from '../../data/img/whatwedo/school.jpg';
 import Food from '../../data/img/whatwedo/food.jpg';
-import Water from '../../data/img/whatwedo/water.jpg';
-import WomanEmpowerment from '../../data/img/whatwedo/womanEmpowerment.jpg';
+
 import Qurbani from '../../data/img/whatwedo/qurbani.jpg';
 
 const CardBlock = () => {
@@ -30,7 +29,9 @@ const CardBlock = () => {
           html='/foodbank'
           content='Smile Care is committed to help those in need of food. Our goal is to provide food and supplies to less-fortunate families across the globe. We aim to collect and provide at least $50 a month to ensure the needs of poor families.'
         />
-        <CardBlockItem
+      
+     <div className='row'> 
+     <CardBlockItem
           card='card medium teal lighten-2 hoverable'
           button='waves-effect waves-light teal lighten-1 btn-large'
           title='Blood Donation'
@@ -38,7 +39,7 @@ const CardBlock = () => {
           html='/socialwelfare'
           content='Our recent and ongoing projects include building wells and providing clean drinking water in poor communities across the globe. TIFC has initiated a water supply system, Sabeel-e-Rehmat (SER), to ensure that clean drinking water is being provided to poor communities around the world'
         />
-           <CardBlockItem
+     <CardBlockItem
           card='card medium brown lighten-2 hoverable'
           button='waves-effect waves-light brown lighten-1 btn-large'
           title='Qurbani'
@@ -46,6 +47,7 @@ const CardBlock = () => {
           html='/qurbani'
           content=''
         />
+     </div>
       </div>
      
     </div>
