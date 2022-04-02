@@ -1,7 +1,17 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import Sidebar from '../Sidebar/Sidebar';
+import Blood_data from './Blood_data';
 
 const Blood_list = () => {
+    const [bloodData, setBloodData] = useState([])
+    useEffect(() => {
+        fetch("http://localhost:5000/api/blood")
+            .then(res => res.json())
+            .then(res => {
+                console.log("res", res.message);
+                setBloodData(res.message)
+            })
+    }, []);
     return (
         <div>
            <Sidebar/>
@@ -12,12 +22,14 @@ const Blood_list = () => {
             <table class="table table-hover  table-borderless table-striped ">
                 <thead>
                     <tr>
-                        <th scope="col">User_Name</th>
+                        {/* <th scope="col">User_Name</th> */}
                     
                         <th scope="col">Blood_Group_Name</th>
                         <th scope="col">Blood_Quantity</th>
                         <th scope="col">Donation_Amount</th>
                         <th scope="col">Donation_Area</th>
+                        <th scope="col">Delete</th>
+
                       
                       
                         
@@ -25,9 +37,9 @@ const Blood_list = () => {
                    
                 </thead>
                 {/* maping data */}
-                {/* {
-                    orderList.map(list => <OrderListDetails list={list} />)
-                } */}
+                {
+                    bloodData.map(list => <Blood_data list={list} />)
+                }
             </table>
 
 

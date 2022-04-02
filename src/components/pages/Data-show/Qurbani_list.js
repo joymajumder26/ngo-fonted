@@ -1,7 +1,17 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import Sidebar from '../Sidebar/Sidebar';
+import Qurbani_data from './Qurbani_data';
 
 const Qurbani_list = () => {
+    const [qurbaniData, setQurbaniData] = useState([])
+    useEffect(() => {
+        fetch("http://localhost:5000/api/qurbani")
+            .then(res => res.json())
+            .then(res => {
+                console.log("res", res.message);
+                setQurbaniData(res.message)
+            })
+    }, []);
     return (
         <div>
         <Sidebar/>
@@ -12,19 +22,20 @@ const Qurbani_list = () => {
          <table class="table table-hover  table-borderless table-striped ">
              <thead>
                  <tr>
-                     <th scope="col">User_Name</th>
+                     {/* <th scope="col">User_Name</th> */}
                      <th scope="col">Meat_Name</th>
                      <th scope="col">Meat_Quantity</th>
                      <th scope="col">Donation_Amount</th>
                      <th scope="col">Donation_Area</th>
+                     <th scope="col">Delete</th>
                    
                      
                  </tr>
              </thead>
              {/* maping data */}
-             {/* {
-                 orderList.map(list => <OrderListDetails list={list} />)
-             } */}
+             {
+                 qurbaniData.map(list => <Qurbani_data list={list} />)
+             }
          </table>
 
 

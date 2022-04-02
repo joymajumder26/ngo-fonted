@@ -7,9 +7,10 @@ const Navbar = () => {
       <div className='navbar-fixed '>
         <nav>
           <div className='nav-wrapper teal'>
-            <Link to='/' className='brand-logo hide-on-small-only'>
+            <Link to='/' className='brand-logo hide-on-small-only' >
               <i class="fa-solid fa-face-grin"></i>
-              Smile Care
+              <img src="https://scontent.fcgp17-1.fna.fbcdn.net/v/t1.6435-9/56629298_1268413646644813_8225749772212895744_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeFNJgvdboXlvQ4SccXF6sQJ7S_3IwHCnPftL_cjAcKc968VUXUHLfXPRoJ6UYLMNYaKYdNJPGKTbPW2PqVgOH9z&_nc_ohc=pbFizLZx-lsAX9P7nY3&_nc_ht=scontent.fcgp17-1.fna&oh=00_AT9HUpZUKtIefMadlWoV7K5Ts5nQmjIFs5yUi83qScJ2_Q&oe=626F22C0" alt=""  width='25px' />
+              <span style={{padding:"10px"}}>Smile Care</span>
             </Link>
             <Link
               to='/'

@@ -1,7 +1,17 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import Sidebar from '../Sidebar/Sidebar';
+import Review_data from './Review_data';
 
 const Review_list = () => {
+    const [reviewData, setReviewData] = useState([])
+    useEffect(() => {
+        fetch("http://localhost:5000/api/review")
+            .then(res => res.json())
+            .then(res => {
+                console.log("res", res.message);
+                setReviewData(res.message)
+            })
+    }, []);
     return (
         <div>
         <Sidebar/>
@@ -16,15 +26,16 @@ const Review_list = () => {
                      <th scope="col">Orgination_Name</th>
                      <th scope="col">Feedback</th>
                      <th scope="col">Rating</th>
+                     <th scope="col">Delete</th>
                      
                    
                      
                  </tr>
              </thead>
              {/* maping data */}
-             {/* {
-                 orderList.map(list => <OrderListDetails list={list} />)
-             } */}
+             {
+                 reviewData.map(list => <Review_data list={list} />)
+             }
          </table>
 
 
