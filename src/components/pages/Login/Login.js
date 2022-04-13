@@ -22,9 +22,12 @@ const Login = () => {
             body: JSON.stringify(userData)
         }).then(res => res.json())
             .then(response => {
-                // window.location.reload()
-                console.log("response", response)
+                console.log("response", response.user)
+                sessionStorage.setItem("verifyData", JSON.stringify(response.user));
                 e.target.reset()
+                setTimeout(() => {
+                    window.location.reload()
+                }, 1000);
 
             })
     };
@@ -33,39 +36,39 @@ const Login = () => {
         fetch("https://jsonplaceholder.typicode.com/users")
             .then(res => res.json())
             .then(res => {
-                console.log("res",res);
+                console.log("res", res);
             })
-      });
+    });
     return (
-       <div>
-           <Navbar/>
-        <div className='register-form '>
+        <div>
+            <Navbar />
+            <div className='register-form '>
 
 
-            <div className="flex-container">
-            
-            <div className="left-form-container">
-            <h2>Welcome to Smile Care</h2>
-            <h4>Please Login Here</h4>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email address</label>
-                    <input type="email" {...register("email", { required: true })} class="form-control" id="email" />
+                <div className="flex-container">
+
+                    <div className="left-form-container">
+                        <h2>Welcome to Smile Care</h2>
+                        <h4>Please Login Here</h4>
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" {...register("email", { required: true })} class="form-control" id="email" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password"  {...register("password", { required: true, maxLength: 10 })} class="form-control" id="password" />
+                            </div>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </form>
+                    </div>
+                    <div className="right-form-container">
+
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password"  {...register("password", { required: true, maxLength: 10 })} class="form-control" id="password" />
-                </div>
-                <button type="submit" class="btn btn-primary">Login</button>
-            </form>
+            </div>
+            <Footer />
         </div>
-        <div className="right-form-container">
-        
-        </div>
-        </div>
-        </div>
-        <Footer/>
-        </div> 
     );
 };
 
